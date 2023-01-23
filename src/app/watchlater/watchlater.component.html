@@ -1,0 +1,7 @@
+
+  <ul class="watchlater-container">
+    <a routerLink="/productDetail/{{item.id}}" class="movie-container" *ngFor="let item of favoriMovies">
+      <img src="https://www.themoviedb.org/t/p/w300_and_h450_bestv2{{ item.poster_path}}" alt="none">
+    </a>
+  </ul>
+

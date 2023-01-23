@@ -1,0 +1,42 @@
+.movie-detail-container{
+  align-items: center;
+  justify-content: center;
+  display: flex;
+  width: 50%;
+  margin: 5rem auto;
+  color: white;
+}
+.movie-info li{
+  list-style: none;
+  padding: 1rem;
+}
+
+.movie-info span{
+  color: red;
+  font-size: 20px;
+}
+.buttons button{
+  padding: 1rem;
+  margin-right: 1rem;
+  cursor: pointer;
+  color: white;
+}
+.buttons button:first-child{
+  background-color: green;
+}
+.buttons button:last-child{
+  background-color: rgb(139, 74, 0);
+}
+
+
+@media(max-width:900px){
+  .movie-detail-container{
+    display: flex;
+    width: 100%;
+    flex-direction: column;
+  }
+  .movie-detail{
+    width: 90%;
+  }
+
+}

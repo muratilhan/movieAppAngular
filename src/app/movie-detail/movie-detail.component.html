@@ -1,0 +1,35 @@
+<div>
+
+
+<ul *ngFor="let item of movies">
+
+  <li *ngIf="(item.id == id); then correct"></li>
+  <ng-template #correct>
+
+    <div class="movie-detail-container">
+      <img src="https://www.themoviedb.org/t/p/w300_and_h450_bestv2{{ item.poster_path}}" alt="none">
+        <ul class='movie-info'>
+          <h2> {{item.title}} </h2>
+          <li><span>Date: </span>{{item.release_date}}</li>
+          <li><span>Rating:</span> {{item.vote_average}}</li>
+          <li><span>Popularite:</span> {{item.popularity}}</li>
+          <li><p>{{item.overview}}</p></li>
+          <div class="buttons">
+            <button [routerLink]="['']">Anasayfa</button>
+            <li *ngIf="(isExist); then exist else notExist"></li>
+            <ng-template #exist>
+              <button (click)="removeFromFavori(item)">Favorilerden Çıkar</button>
+            </ng-template>
+            <ng-template #notExist>
+              <button (click)="addToFavori(item)">Favorilere Ekle</button>
+            </ng-template>
+          </div>
+        </ul>
+      </div>
+  </ng-template>
+
+
+</ul>
+
+
+</div>

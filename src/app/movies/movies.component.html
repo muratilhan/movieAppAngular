@@ -1,0 +1,18 @@
+<div class="home-main">
+
+  <app-slider></app-slider>
+
+  <div class="titles">
+    <li  (click)="toggleMovies('now_playing')">Now Playing</li>
+    <li (click)="toggleMovies('upcoming')">Upcoming</li>
+    <li (click)="toggleMovies('popular')">Popular</li>
+  </div>
+
+
+
+  <ul class="movies-container">
+    <a [routerLink]="['productDetail', item.id]" class="movie-container" *ngFor="let item of movies">
+      <img src="https://www.themoviedb.org/t/p/w300_and_h450_bestv2{{ item.poster_path}}" alt="none">
+    </a>
+  </ul>
+</div>

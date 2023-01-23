@@ -1,0 +1,13 @@
+.navbar-container{
+  display: flex;
+  width: 100%;
+  color: white;
+  align-items: center;
+  justify-content: space-evenly;
+}
+.navbar-container li{
+  display: flex;
+  font-size: 36px;
+  border-bottom: 1px solid white;
+  cursor: pointer;
+}
